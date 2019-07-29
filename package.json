@@ -3,24 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "npm run init-db && ./node_modules/nodemon/bin/nodemon.js server.js",
-    "sequelize-skeleton": "./node_modules/sequelize-cli/lib/sequelize init:models; ./node_modules/sequelize-cli/lib/sequelize init:config",
-    "init-db": "cd /opt/lampp/bin/ && echo 'DROP DATABASE IF EXISTS api_node_demo; CREATE DATABASE api_node_demo CHARACTER SET utf8 COLLATE utf8_general_ci' | ./mysql -u root && cd -"
+    "start": "nodemon  server.js",
+    "sequelize-skeleton": "./node_modules/sequelize-cli/lib/sequelize init:models; ./node_modules/sequelize-cli/lib/sequelize init:config"
   },
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "mysql2": "^1.5.3",
-    "sequelize": "^5.9.4"
+    "sequelize": "^5.9.4",
+    "sqlite3": "^4.0.9"
   },
   "private": true,
   "keywords": [],
   "author": "Infocentric Research AG, Baden, Switzerland",
   "license": "ISC",
   "devDependencies": {
-    "faker": "^4.1.0",
-    "lodash.random": "^3.2.0",
-    "lodash.times": "^4.3.2",
     "nodemon": "^1.18.3",
     "sequelize-cli": "^4.0.0"
   }
